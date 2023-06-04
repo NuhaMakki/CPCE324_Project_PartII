@@ -1,0 +1,72 @@
+/*
+Department of Computer Science
+CPCS 324: Algorithms and Data Structures (II) 
+Spring 2023 Group Project – Part II
+Implement Dijkstra algorithm and using it to compute the all-pair-source shortest path problem
+
+---------------------------------------
+Name           | ID         | Section
+---------------------------------------
+Nuha Makki     | 2024579    | B8	   
+Rawan Algamdi  | 2005446    | B8		   
+Rawan Aljedani | 1906454    | B0B	
+Joud Alahmadi  | 2006214    | B0B		   
+---------------------------------------
+
+project link on GitHub:
+https://github.com/NuhaMakki/CPCE324_Project_PartII.git
+
+
+*/
+
+
+
+package AirFreightApp;
+
+import GraphFramework.LinkedList;
+import GraphFramework.Vertex;
+
+//this class is a subclass of Vertex
+public class Location extends Vertex{
+    
+    // ---------------------------------------------
+    //            variables declaration 
+    // ---------------------------------------------
+    int city=0;
+
+    
+    // ---------------------------------------------
+    //               constructor
+    // --------------------------------------------- 
+
+    public Location(String label) {
+        this.setLabel(label);
+    }
+ 
+    
+    // ---------------------------------------------
+    //            setters & getters 
+    // ---------------------------------------------    
+    public int getCity() {
+        return city;
+    }
+
+    public void setCity(int citynum) {
+        this.city = citynum;
+    }  
+    
+    
+    
+    // ---------------------------------------------
+    //                   functions 
+    // ---------------------------------------------   
+    
+    @Override
+     public void displayInfo(){     
+        System.out.print("Loc.");
+        super.displayInfo();
+        System.out.print(": city " + city + " ");
+    } 
+}
+
+
