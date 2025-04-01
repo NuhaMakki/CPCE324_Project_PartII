@@ -20,62 +20,77 @@ The project includes a **Graph Framework** consisting of:
 - **Vertex Class:** Defines graph nodes representing locations.
 - **Edge Class:** Defines weighted connections between locations.
 
-### 🔄 Dijkstra’s Algorithm Implementation
-1. **Single-Source Shortest Path Computation:**
+
+## 🔄 Dijkstra’s Algorithm Implementation
+### 🏹 Single-Source Shortest Path Computation
+1. **Computation Process:**
    - Implements **Dijkstra’s Algorithm** using a **priority queue (Min-Heap)**.
    - Computes the shortest paths from a starting location to all other locations.
    - Prints the shortest paths and their corresponding distances.
 
-2. **All-Pairs Shortest Path Computation:**
+2. **Input Graph:**
+   - The graph is loaded from a file using the `readGraphFromFile()` method.
+   - All edges represent air routes.
+   
+   <p align="center">
+     <img src="Dijkstra_img/Graph.png" width="80%" alt="Graph Before and After Dijkstra">
+   </p>
+
+3. **Screenshots of Output:**
+   - Dijkstra’s algorithm computes the shortest path from a selected source node.
+   - The resulting graph highlights the shortest paths to all reachable nodes.
+   
+   <p align="center">
+     <img src="Dijkstra_img/output1.png" width="80%" alt="Graph Read from File">
+   </p>
+
+
+
+---
+
+### 🔁 All-Pairs Shortest Path Computation
+1. **Computation Process:**
    - Applies Dijkstra’s Algorithm iteratively for all locations.
    - Displays shortest paths from each location to every other location.
 
-## 🖼️ Input Graph
-The visualization below shows the graph data read from a file using the `readGraphFromFile()` method. All edges represent air routes.
-<p align="center">
-  <img src="Dijkstra_img/Graph.png" width="80%" alt="Graph Before and After Dijkstra">
-</p>
+2. **🔬 Graph Generation:**
+   - A function `makeGraph(n, m)` generates random directed weighted graphs for:
+     - `n=2000` with `m=10000`
+     - `n=3000` with `m=15000`
+     - `n=4000` with `m=20000`
+     - `n=5000` with `m=25000`
+     - `n=6000` with `m=30000`
+
+3. **Screenshots of Output 2:**
+   - Displays the computed shortest paths for all pairs of vertices.
+   
+   <p align="center">
+     <img src="Dijkstra_img/output2.png" width="80%" alt="Shortest Path Computation">
+   </p>
+
+4. **📈 Performance Comparison:**
+   - **Execution Time Measurement:**
+     - Dijkstra’s Algorithm is run on randomly generated graphs to measure its efficiency.
+     - The following table compares experimental and theoretical runtime:
+     
+     <p align="center">
+       <img src="Dijkstra_img/time_efficiency.png" width="80%" alt="Dijkstra Execution Time Comparison">
+     </p>
+
+   - **Theoretical vs. Empirical Analysis:**
+     - The project compares the observed execution times with the expected theoretical time complexity.
+     - Uses a ratio table to evaluate efficiency trends:
+     - 
+     <p align="center">
+       <img src="Dijkstra_img/ratios.png" width="80%" alt="Dijkstra Execution Time Comparison">
+     </p>
+
+   - **Analysis of Results:**
+     - As the number of vertices (`n`) increases, the empirical time efficiency follows the expected theoretical trend.
+     - The ratio of execution time decreases as `n` increases, demonstrating improved efficiency in larger graphs.
+     - The difference between empirical and theoretical values decreases, reinforcing the algorithm's scalability.
 
 
-req1
-<p align="center">
-  <img src="Dijkstra_img/output1.png" width="80%" alt="Graph Before and After Dijkstra">
-</p>
-
-req2
-<p align="center">
-  <img src="Dijkstra_img/output2.png" width="80%" alt="Graph Before and After Dijkstra">
-</p>
-
-## 📊 Performance Analysis
-### 🔬 Graph Generation
-A function `makeGraph(n, m)` generates random directed weighted graphs for:
-- `n=2000` with `m=10000`
-- `n=3000` with `m=15000`
-- `n=4000` with `m=20000`
-- `n=5000` with `m=25000`
-- `n=6000` with `m=30000`
-
-### 📈 Performance Comparison
-- **Execution Time Measurement:** Runs Dijkstra’s Algorithm on generated graphs.
-  - Example of empirical runtime comparison:
-<p align="center">
-  <img src="Dijkstra_img/time_efficiency.png" width="80%" alt="Dijkstra Execution Time Comparison">
-</p>
-
-<p align="center">
-  <img src="Dijkstra_img/ratios.png" width="80%" alt="Dijkstra Execution Time Comparison">
-</p>
-
-- **Theoretical vs. Empirical Analysis:**
-  - Compares observed execution times with expected theoretical time complexity.
-  - Uses a ratio table to evaluate efficiency trends:
-    
-| n      | Execution Time (ms) | Expected Time Complexity |
-|--------|---------------------|--------------------------|
-| 2000   | X ms               | O(n log n)              |
-| 3000   | Y ms               | O(n log n)              |
-| 4000   | Z ms               | O(n log n)              |
 
 ## 🚀 Getting Started
 ### 🛠️ Installation & Setup
@@ -84,7 +99,7 @@ A function `makeGraph(n, m)` generates random directed weighted graphs for:
    git clone https://github.com/NuhaMakki/Air_Freight_Dijkstra.git
    ```
 2. **Open the project in your preferred Java IDE.**
-3. **Run the main program `AirFreightOptimization.java`.**
+3. **Run the main program `AirFreightApp.java`.**
 
 ## 🔍 Usage Guide
 - 📂 **Read Graph from File:** Ensure the input file follows the required structure.
