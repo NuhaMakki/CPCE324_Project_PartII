@@ -96,7 +96,7 @@ The project includes a **Graph Framework** consisting of:
 ### 🛠️ Installation & Setup
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/NuhaMakki/Air_Freight_Dijkstra.git
+   git clone https://github.com/NuhaMakki/Air_Freight_Optimization_Dijkstra_Algorithm.git
    ```
 2. **Open the project in your preferred Java IDE.**
 3. **Run the main program `AirFreightApp.java`.**
